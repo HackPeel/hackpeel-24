@@ -65,12 +65,22 @@ body {
 }
 
 #bg-gradient {
-    position: fixed;
+    position: absolute;
     height: 120%;
-    width: 120%;
+    width: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 0%;
+    top: -5%;
     z-index: -1;
     opacity: 50%;
+}
+
+.section-title {
+    width: 100%;
+    color: #00FFCA;
+    font-family: "Geologica", sans-serif;
+    font-weight: 600;
+    font-size: 6vh;
+    text-align: center;
+    padding-top: 5vh;
 }
