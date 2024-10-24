@@ -1,12 +1,16 @@
 #about {
-    height: 50vh;
+    height: auto;
+    padding-bottom: 10vh;
     background-color: #1E095A;
 }
 
 #google-maps {
-    width: 10vh;
-    height: 10vh;
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
     border: 2px solid black;
+    margin-left: 7vw;
+    margin-top: 6vh;
 }
 
 .info-subheading {
@@ -25,13 +29,16 @@
 }
 
 .info-tab {
-    width: 25vw;
+    width: 22vw;
     padding: 1vw;
     margin: 0.5vw;
-    border: 2px solid black;
+    border-radius: 1vh;
+    background: linear-gradient(180deg, #200f63 0%, #1D114F 100%);
+    box-shadow: 0px 0.55vh 0.55vh 0px #00000040;
 }
 
 #info-grid {
+    margin-top: 5vh;
     display: grid;
     grid-template-columns: auto auto;
     gap: 2vh;
