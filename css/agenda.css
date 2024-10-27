@@ -1,5 +1,8 @@
 #agenda {
-    height: 50vh;
+    height: auto;
+    padding-bottom: 3vh;
+    background-color: #1E095A;
+    scroll-margin: 10vh;
 }
 
 table {
@@ -34,4 +37,18 @@ tr {
 
 tr:hover {
     background-color: #29147c;
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    table {
+        display: block;
+        width: 60vw;
+    }
+
+    .table-heading {
+        width: 60vw;
+        font-weight: 500;
+        font-size: 2.5vh;
+        padding: 1.5vh;
+    }
 }

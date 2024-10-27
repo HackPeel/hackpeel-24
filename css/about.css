@@ -1,23 +1,33 @@
 #about {
     height: auto;
     padding-bottom: 10vh;
-    background-color: #1E095A;
+    background-color: #230A66;
+    scroll-margin: 10vh;
 }
 
 #google-maps {
     position: absolute;
-    width: 50vh;
-    height: 50vh;
-    border: 2px solid black;
+    width: 30vw;
+    height: 30vw;
     margin-left: 7vw;
     margin-top: 6vh;
+    border-radius: 5%;
+}
+
+#google-maps iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 5%;
 }
 
 .info-subheading {
     color: white;
     font-family: "Geologica", sans-serif;
     font-weight: 500;
-    font-size: 4vh;
+    font-size: 2vw;
     margin-bottom: 1vh;
 }
 
@@ -25,7 +35,7 @@
     color: rgb(190, 190, 190);
     font-family: "Geologica", sans-serif;
     font-weight: 200;
-    font-size: 2.5vh;
+    font-size: 1vw;
 }
 
 .info-tab {
@@ -43,4 +53,30 @@
     grid-template-columns: auto auto;
     gap: 2vh;
     padding-left: 40vw;
+}
+
+@media screen and (max-aspect-ratio: 1){
+    .info-text {
+        font-size: 1.3vh;
+    }
+
+    .info-subheading {
+        font-size: 2vh;
+    }
+
+    .info-tab {
+        width: 60vw;
+    }
+
+    #info-grid {
+        padding-left: 19vw;
+        margin-top: 35vw;
+        transform: translateY(6vh);
+        grid-template-columns: auto;
+    }
+
+    #google-maps {
+        margin-left: 20vw;
+        width: 60vw;
+    }
 }

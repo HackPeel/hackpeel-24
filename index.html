@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="css\about.css">
         <link rel="stylesheet" href="css\agenda.css">
         <link rel="stylesheet" href="css\faq.css">
-        <link rel="stylesheet" href="css\organizers.css">
         <link rel="stylesheet" href="css\sponsors.css">
         <link rel="stylesheet" href="css\footer.css">
     </head>
@@ -25,13 +24,12 @@
     <body onload="removeTaskbar()">
         <img src="images/bg-gradient.png" id = "bg-gradient">
         <div id = "taskbar">
-            <span class = "taskbar-button" id = "taskbar-home">Home</span>
-            <span class = "taskbar-button" id = "taskbar-about">About</span>
-            <span class = "taskbar-button" id = "taskbar-agenda">Agenda</span>
-            <span class = "taskbar-button" id = "taskbar-faq">FAQ</span>
-            <span class = "taskbar-button" id = "taskbar-organizers">Organizers</span>
-            <span class = "taskbar-button" id = "taskbar-sponsors">Sponsors</span>
-            <span class = "taskbar-button" id = "taskbar-devpost">Devpost</span>
+            <span class = "taskbar-button" id = "taskbar-home" onclick="smoothScroll(document.getElementById('home'))">Home</span>
+            <span class = "taskbar-button" id = "taskbar-about" onclick="smoothScroll(document.getElementById('about'))">About</span>
+            <span class = "taskbar-button" id = "taskbar-agenda" onclick="smoothScroll(document.getElementById('agenda'))">Agenda</span>
+            <span class = "taskbar-button" id = "taskbar-faq" onclick="smoothScroll(document.getElementById('faq'))">FAQ</span>
+            <span class = "taskbar-button" id = "taskbar-sponsors" onclick="smoothScroll(document.getElementById('sponsors'))">Sponsors</span>
+            <span class = "taskbar-button" id = "taskbar-devpost" onclick="location.href='https://hackpeel.ca/'">Devpost</span>
         </div>
 
         <div id = "home">
@@ -57,7 +55,9 @@
         
         <div id = "about">
             <div class = "section-title">Event Overview</div>
-            <div id = "google-maps"></div>
+            <div id = "google-maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.105027776388!2d-79.65091792382792!3d43.56269457110664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b46b30e7ae459%3A0x48f3baaddabb247b!2sThe%20Woodlands%20School%20-%20Secondary!5e0!3m2!1sen!2sca!4v1730046737682!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <div id = "info-grid">
                 <div class = "info-tab">
                     <div class = "icon">
@@ -134,7 +134,7 @@
             <div class = "section-title">Agenda</div>
             <center>
                 <div id = "tables">
-                    <table>
+                    <table id = "table1">
                         <tr>
                           <td class = "table-heading" colspan="2">Day</td>
                         </tr>
@@ -151,8 +151,7 @@
                             <td>Description</td>
                         </tr>
                     </table>
-
-                    <table>
+                    <table id = "table2">
                         <tr>
                             <td class = "table-heading" colspan="2">Day</td>
                         </tr>
@@ -174,23 +173,90 @@
         </div>
 
         <div id = "faq">
-        
-        </div>
-
-        <div id = "organizers">
-        
+            <div class = "section-title">Frequently Asked Questions</div>
+            <div id = "faq1">
+                <details>
+                    <summary>What's a hackathon?</summary>
+                    <div>
+                        </br>Hackathons are 'development marathons', where people collaborate intensively over a short period of time to create a working project.
+                    </div>
+                </details>
+                <details>
+                    <summary>Where/when in the hackathon?</summary>
+                    <div>
+                        </br>The hackathon is planned to run from Dec 16 - Dec 17 at The Woodlands Secondary School. Check the timetable for more information.
+                    </div>
+                </details>
+                <details>
+                    <summary>Is the hackathon running overnight</summary>
+                    <div>
+                        </br>No, participants will go home after Day 1 and come back to the venue on Day 2. Check the timetable for more information.
+                    </div>
+                </details>
+                <details>
+                    <summary>Can I work on my project at home?</summary>
+                    <div>
+                        </br>Yes, but only after hacking begins. You can continue working on your project after you go home at the end of each day.
+                    </div>
+                </details>
+                <details>
+                    <summary>Who can attend?</summary>
+                    <div>
+                        </br>Any high school student can attend. Students not attending a Peel District School Board high school may need to complete additional steps, which will be dealt with after registration.
+                    </div>
+                </details>
+            </div>
+            <div id = "faq2">
+                <details>
+                    <summary>Are there any prizes for winners?</summary>
+                    <div>
+                        </br>With the help of our sponsors, we will be providing >$20,000 in prizes in cash, software, and API prizes to the chosen winners. All attendees will also get swag bags and sponsor merch!
+                    </div>
+                </details>
+                <details>
+                    <summary>Can I start working before the hackathon begins?</summary>
+                    <div>
+                        </br>While you can explore ideas, you are not allowed to write code or begin working on the project before the hacking period of the hackathon starts.
+                    </div>
+                </details>
+                <details>
+                    <summary>Are there any required submission formats</summary>
+                    <div>
+                        </br>All projects will need to be submitted via the Devpost. Project source code must be present on a shareable VCS such as GitHub.
+                    </div>
+                </details>
+                <details>
+                    <summary>Is there a theme for the hackathon?</summary>
+                    <div>
+                        </br>To allow for as much creative liberty, there is no required project theme. However, specific theme restrictions apply for sponsor prize eligibility. Check the Devpost for more info.
+                    </div>
+                </details>
+                <details>
+                    <summary>How large can my team be?</summary>
+                    <div>
+                        </br>Teams have a maximum size of 4 members.
+                    </div>
+                </details>
+            </div>
         </div>
 
         <div id = "sponsors">
-        
+            <div class = "section-title">Sponsors</div>
+            <center>
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor1">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor2">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor3">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor4">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor5">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor6">
+            <img src = "https://hackpeel.ca/sponsor_logos/wolfram.png" class = "sponsor-img" id = "sponsor7">
+            </center>
         </div>
 
         <div id = "footer">
-            <div id = "footer-hackpeel"><font color="#00FFCA">hack::</font><font color="#FFFFFF">peel</font></div>
-            <img src="images/icons/devpost-logo.png" class = "contact-icon">
-            <img src="images/icons/discord-logo.png" class = "contact-icon">
-            <img src="images/icons/instagram-logo.png" class = "contact-icon">
-            <img src="images/icons/linkedin-logo.png" class = "contact-icon">
+            <img src="images/icons/discord-logo.png" class = "contact-icon" onclick="location.href='https://discord.gg/z75rxjTTDC'">
+            <img src="images/icons/instagram-logo.png" class = "contact-icon" onclick="location.href='https://www.instagram.com/hackpeel'">
+            <img src="images/icons/linkedin-logo.png" class = "contact-icon" onclick="location.href='https://www.linkedin.com/company/hack-peel/'">
         </div>
     </body>
 </html>

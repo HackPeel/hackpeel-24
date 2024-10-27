@@ -1,17 +1,10 @@
 #footer {
-    height: 7vh;
+    height: 12vh;
     background: #1E095A;
     box-shadow: 0px -0.55vh 0.55vh 0px #00000040;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#footer-hackpeel {
-    position: absolute;
-    font-family: "Overpass Mono", monospace;
-    font-weight: 700;
-    font-size: 3vh;
 }
 
 .contact-icon {
@@ -20,8 +13,9 @@
     margin-left: 1vw;
     margin-right: 1vw;
     border-radius: 1vh;
+    filter: brightness(90%);
 }
 
 .contact-icon:hover {
-    opacity: 70%;
+    filter: brightness(80%);
 }

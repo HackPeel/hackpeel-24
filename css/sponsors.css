@@ -1,5 +1,21 @@
 #sponsors {
-    height: 50vh;
-    border: 2px solid black;
-    border-bottom: 0px;
+    height: auto;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 5vh;
+    scroll-margin: 10vh;
+}
+
+.sponsor-img {
+    margin: 2vw;
+    height: 15vh;
+}
+
+.sponsor-img:hover {
+    filter: brightness(200%);
+    cursor: pointer;
+}
+
+#footer-hackpeel {
+    position: absolute;
 }

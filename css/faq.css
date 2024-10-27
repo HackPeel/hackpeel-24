@@ -1,4 +1,61 @@
 #faq {
-    height: 50vh;
-    border: 2px solid black;
+    height: auto;
+    padding-bottom: 5vh;
+    background-color: #230A66;
+    scroll-margin: 10vh;
+}
+
+details {
+    padding: 1vw;
+    width: 30vw;
+    border: 1px solid white;
+    color: rgb(209, 209, 209);
+    font-family: "Geologica", sans-serif;
+    font-weight: 200;
+    font-size: 2vh;
+}
+
+details[open] > summary:before {
+    transform: rotate(90deg);
+}
+
+summary {
+    color: white;
+    font-family: "Geologica", sans-serif;
+    font-weight: 500;
+    font-size: 2.5vh;
+    cursor: pointer;
+    user-select: none;
+}
+
+#faq1 {
+    margin-top: 2vh;
+    position: relative;
+    display: inline-block;
+    margin-left: 15vw;
+}
+
+#faq2 {
+    margin-top: 2vh;
+    vertical-align: top;
+    margin-left: 2vw;
+    position: relative;
+    display: inline-block;
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    details {
+        width: 70vw;
+    }
+    #faq1 {
+        margin-left: 15vw;;
+        display: block;
+    }
+
+    #faq2 {
+        margin-left: 15vw;
+        margin-top: 0vh;
+        display: block;
+        width: 60vw;
+    }
 }

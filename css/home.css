@@ -1,9 +1,9 @@
-
 #home {
     margin-top: 10vh;
     width: 100%;
     height: 100vh;
     animation: 1s fadeInUp;
+    scroll-margin: 10vh;
 }
 
 @media screen and (min-aspect-ratio: 7/4) {
